@@ -5,11 +5,13 @@
   "main": ".eslintrc.js",
   "dependencies": {
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
+    "@types/styled-components": "^4.4.0",
     "@types/webpack": "^4.41.0",
     "@types/webpack-merge": "^4.1.5",
     "@whatasoda/eslint-config": "^1.3.4",
@@ -18,6 +20,7 @@
     "prettier": "^1.19.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
+    "typescript-plugin-styled-components": "^1.4.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",

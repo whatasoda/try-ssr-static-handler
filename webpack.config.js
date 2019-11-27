@@ -1,6 +1,9 @@
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = merge({
   entry: path.resolve(__dirname, 'src/index.tsx'),
@@ -19,7 +22,14 @@ module.exports = merge({
     rules: [
       {
         test: /\.tsx?$/,
-        use: ['ts-loader'],
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+            },
+          },
+        ],
       },
     ],
   },
