@@ -1,8 +1,34 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import App from './App';
+import StaticHandlerProvider from './useStaticHandler';
+import { hoge } from './handlers';
 
-const init = () => {
-  render(<div>Hello, World.</div>, document.getElementById('app'));
+const elem = document.getElementById('app');
+const render = () => {
+  ReactDOM.render(
+    <StaticHandlerProvider enable={false} entries={[hoge]}>
+      <App />
+    </StaticHandlerProvider>,
+    elem,
+  );
 };
 
-init();
+const hydrate = () => {
+  ReactDOM.hydrate(
+    <StaticHandlerProvider enable={true} entries={[hoge]}>
+      <div dangerouslySetInnerHTML={{ __html: '' }} suppressHydrationWarning />
+    </StaticHandlerProvider>,
+    elem,
+  );
+};
+
+const main = () => {
+  if (elem?.childNodes.length) {
+    hydrate();
+  } else {
+    render();
+  }
+};
+
+main();
