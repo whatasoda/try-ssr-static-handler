@@ -1,0 +1,8 @@
+{
+  "extends": "@whatasoda/tsconfig",
+  "compilerOptions": {
+    "rootDir": "."
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
+}

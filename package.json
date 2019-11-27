@@ -1,0 +1,40 @@
+{
+  "name": "try-ssr-static-handler",
+  "version": "1.0.0",
+  "description": "let me try to set handler to element without full hydration",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "@types/webpack": "^4.41.0",
+    "@types/webpack-merge": "^4.1.5",
+    "@whatasoda/eslint-config": "^1.3.4",
+    "@whatasoda/tsconfig": "^1.0.3",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.19.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatasoda/try-ssr-static-handler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whatasoda/try-ssr-static-handler/issues"
+  },
+  "homepage": "https://github.com/whatasoda/try-ssr-static-handler#readme"
+}
